@@ -18,39 +18,33 @@
 
     <body>
         <div class="row">
-            <div class="image-container"><img src="images/original/handshake.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="images/original/handheart.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="images/original/handraised.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/0.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/1.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/2.png" height="200" width="200"/></div>
         </div>
 
         <div class="row">
-            <div class="image-container"><img src="images/original/homefamily.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="images/original/homeneighbourhood.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="images/original/homevirtual.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/3.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/4.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/5.png" height="200" width="200"/></div>
             </div>
 
         <div class="row">
-            <div class="image-container"><img src="images/original/hugcircle.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="images/original/hug.png" height="200" width="200"/></div>
-            <div class="image-container"><img src="images/original/hugheart.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/6.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/7.png" height="200" width="200"/></div>
+            <div class="image-container"><img src="images/8.png" height="200" width="200"/></div>
         </div>
     </body>
 </html>
 
 <script>
 
-    document.body.style.backgroundColor = `hsl(0, 0%, 100%)`
+    document.body.style.backgroundColor = `rgb(253, 246, 230)`
     // document.body.style.backgroundColor = `hsl(180, 50%, 50%)`
 
     const icon_elements = Array.from (document.getElementsByTagName (`img`))
     icon_elements.forEach ((element, index) => {
         const audio = new Audio (`sounds/${ index }.mp3`)
-        element.onpointerover = () => {
-            element.src = `images/changed/${ index }.png`
-        }
-        element.onpointerleave = () => {
-            element.src = `images/original/${ index }.png`
-        }
         element.onpointerdown = () => audio.play ()
     })
 </script>
